@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (min-width: 300px) and (max-width: 991px) {
+
+    body {
+        background-color: antiquewhite;
+
+}
+    .navbar {
+        display: flex;
+        width: 100vw;
+        background-color: black;
+        height: 4rem;
+        color: white;
+        align-items: center;
+    }
+    
+    .navitems {
+        width: 100vw;
+        display: flex;
+        flex-direction: row-reverse;
+        list-style-type: none;
+        justify-content: center;
+        
+        /* gap: 50rem; */
+    }
+    .twobtns {
+        
+    }
+    
+    li {
+        display: inline;
+    }
+    .twobtns {
+        display: none;
+        gap: 5rem;
+    }
+    
+    .content {
+        display: grid;
+        height: 80vh;
+        grid-template-areas: 
+        'left '
+        'right';
+        
+        align-items: center;
+        justify-content: center ;
+        grid-auto-columns: 20rem;
+    }
+    
+    .right-content {
+        grid-area: right;
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+        'pink pink'
+        'blue2 blue1'
+        'black black';
+        gap: 1rem;
+        
+    }
+    
+    .left-content {
+        grid-area: left;
+        display: flex;
+        flex-flow: column wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .right-boxes {
+        background-color: pink;
+        width: 10rem;
+        height: 5rem;
+        grid-area: pink;
+    }
+    
+    .nonbtn {
+    
+    }
+    
+    .btn {
+        display: inline;
+        background-color: blue;
+    
+    margin-right: 0;
+    text-align: left;
+    padding-inline: 3rem;
+    }
+    
+    .blue1
+    {
+        grid-area: blue1;
+        background-color: blue;
+        width: 4.5rem;
+        height: 4rem;
+     
+    }
+    .blue2
+    {
+        grid-area: blue2;
+        background-color: blue;
+        width: 4.5rem;
+        height: 4rem;
+        
+        
+    }
+    .black {
+        grid-area: black;
+        display: absolute;
+        background-color: black;
+        width: 10rem;
+        height: 5rem;
+        
+        
+    }
+    
+    footer {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 50rem;
+        background-color: black;
+        color: white;
+    }
+    
+    .footcontent1 {
+        display: none;
+        display: grid;
+        row-gap: .5rem;
+    }
+    .footcontent2 {
+        display: none;
+        display: grid;
+        row-gap: .5rem;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    
+
+    .navbar {
+        display: flex;
+        width: 100vw;
+        background-color: black;
+        height: 4rem;
+        color: white;
+        align-items: center;
+    }
+    
+    .navitems {
+        width: 100vw;
+        display: flex;
+        flex-direction: row-reverse;
+        list-style-type: none;
+        justify-content: center;
+        
+        gap: 50rem;
+    }
+    
+    li {
+        display: inline;
+    }
+    .twobtns {
+        display: flex;
+        gap: 5rem;
+    }
+
+    .twobtns 
+        img {
+            display: none;
+    }
+    
+    .content {
+        display: grid;
+        height: 80vh;
+        grid-template-areas: 
+        'left right';
+        
+        align-items: center;
+        justify-content: center ;
+        grid-auto-columns: 20rem;
+    }
+    
+    .right-content {
+        grid-area: right;
+        display: flex;
+        
+    }
+    
+    .left-content {
+        grid-area: left;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 10rem;
+        padding-right: 10rem;
+    }
+    
+    .right-boxes {
+        position: relative;
+        background-color: pink;
+        width: 30vw;
+        height: 60vh;
+    }
+ 
+    
+    .btn {
+        display: inline;
+        background-color: blue;
+    border: solid black;
+    margin-right: 0;
+    text-align: left;
+    padding-inline: 3rem;
+    }
+    
+    .blue1
+    {
+        position: absolute;
+        background-color: blue;
+        width: 5rem;
+        height: 5rem;
+        margin-top: -2rem;
+        margin-left:-2rem ;
+    }
+    .blue2
+    {
+        position: absolute;
+        background-color: blue;
+        width: 5rem;
+        height: 5rem;
+        margin-top:  10rem;
+        margin-left: 10rem ;
+        z-index: 1;
+    }
+    .black {
+        position: absolute;
+        background-color: black;
+        width: 10rem;
+        height: 10rem;
+        margin-left: 1rem;
+        margin-top: -3rem;
+        
+    }
+    
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50rem;
+        background-color: black;
+        color: white;
+        height: 3rem;
+    }
+    
+    .footcontent1 {
+        display: grid;
+        row-gap: .5rem;
+    }
+    .footcontent2 {
+        display: grid;
+        row-gap: .5rem;
+    }
+  }
